@@ -3,15 +3,9 @@
 }
 
 #navbar-title__and__logout {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 #navbar-title__and__logout #logout {
@@ -30,17 +24,9 @@
 
 
 .add-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
+    align-items: center;
     width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -51,15 +37,9 @@
 .button-helper {
     cursor: pointer;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     z-index: 100;
     border-radius: 50%;
     width: 2.5rem;
@@ -84,27 +64,18 @@
 }
 
 .modal-form-helper {
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     position: fixed;
     top: 0;
     z-index: 99;
     overflow: hidden;
     height: var(--window-height);
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     opacity: 1;
     visibility: visible;
-    -webkit-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
 
@@ -112,8 +83,7 @@
 .mobile-keyboard-active label,
 .mobile-keyboard-active input, 
 .mobile-keyboard-active button {
-    -ms-flex-item-align: start !important;
-        align-self: flex-start !important;
+    align-self: flex-start !important;
     gap: 0 !important;
     /* height: 18rem !important; */
     font-size: 1rem !important;
@@ -130,8 +100,6 @@
 #event-update-form {
     padding: 0.5rem;
     border-radius: 1rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -141,8 +109,6 @@
 #delete-form {   
     padding: 0.5rem;
     border-radius: 1rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -159,9 +125,7 @@
     #events-page h2 {
         margin: 0;
         padding: 0;
-        -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center;
+        align-self: center;
     }
     
     #gallery-page .add-container {
@@ -172,9 +136,7 @@
     #gallery-page h2 {
         margin: 0;
         padding: 0;
-        -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center;
+        align-self: center;
     }
 
     #gallery-page .delete-item {
@@ -193,9 +155,7 @@
     #location-page h2 {
         margin: 0;
         padding: 0;
-        -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center;
+        align-self: center;
     }
 
     .edit-item {
