@@ -122,7 +122,7 @@ const getLocation = async () => {
             container: 'mapbox', // container id
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: [long, lat], // starting position [lng, lat]
-            zoom: 9 // starting zoom
+            zoom: 10 // starting zoom
         });
         var marker = new mapboxgl.Marker()
             .setLngLat([long, lat])
@@ -189,15 +189,18 @@ const subscribeCustomer = async (formData, submittedForm) => {
         // display error modal
         // remove loading spinner
         loadingIndicator.classList.remove('is-loading');
+        submittedForm.reset();
         return feedbackModal("Oops! <br> Something went wrong subscribing. Try again later", "GO BACK", "style='background-color: #912e29'");
     } else if (data.alreadySub) {
         // modal for already subbed
         loadingIndicator.classList.remove('is-loading');
+        submittedForm.reset();
         return feedbackModal(`${data.alreadySub}`, "OK");
     } else {
         // remove loading spinner
         loadingIndicator.classList.remove('is-loading');
         // display successfully subbed
+        submittedForm.reset();
         return feedbackModal("Thank you for subscribing! You will now receive updates on upcoming events.", "OK");
     }
 }

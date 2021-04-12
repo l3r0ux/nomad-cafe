@@ -370,7 +370,7 @@ const postLocation = async (coordinates, submittedForm) => {
             container: 'mapbox', // container id
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: [longitude, latitude], // starting position [lng, lat]
-            zoom: 9 // starting zoom
+            zoom: 10 // starting zoom
         });
         var marker = new mapboxgl.Marker()
             .setLngLat([longitude, latitude])
