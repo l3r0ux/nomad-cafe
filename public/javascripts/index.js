@@ -12,7 +12,6 @@ const toTop = document.querySelector('#to-top');
 // All pages
 const pages = document.querySelectorAll('.page-helper');
 const mapLocation = document.getElementById('location-page__map');
-const closeFooterLink = document.getElementById('close-footer');
 
 // Side scroll windows
 const menuSideScrollWindow = document.querySelector('#menu-page .side-scroll-window');
@@ -306,11 +305,6 @@ formToggleButtons.forEach((button) => {
             contactForm.classList.remove('hide-form');
         }
     });
-});
-
-// hide footer
-closeFooterLink.addEventListener('click', () => {
-    window.scrollBy(0, -(footer.getBoundingClientRect().height));
 });
 
 // to show and hide nav
