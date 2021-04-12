@@ -214,7 +214,7 @@ allModals.forEach((modal) => {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
             } else {
-                alert('Geolocation is not supported by this browser');
+                return feedbackModal("Oops! <br> Geolocation isn't supported by this browser.", "GO BACK", "style='background-color: #912e29'")
             }
         }
     });
