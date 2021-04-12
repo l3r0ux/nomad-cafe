@@ -41,7 +41,7 @@ const postMenuItem = async (formData, submittedForm) => {
         sideScrollWindowItemContainer.className = 'side-scroll-window__item';
         // putting id as hidden input aswell
         // access with document.getElementById('menuItemId').value
-        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${data._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${data.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${data.menuItemName}</h2><h3>${data.menuItemPrice}</h3><p>${data.menuItemDescription}</p></div>`;
+        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${data._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${data.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${data.menuItemName}</h2><h3>R${data.menuItemPrice}</h3><p>${data.menuItemDescription}</p></div>`;
         appendLocation.append(sideScrollWindowItemContainer);
         return feedbackModal("Menu item succesfully added.", "OK");
     }

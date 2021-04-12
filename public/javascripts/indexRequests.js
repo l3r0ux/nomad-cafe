@@ -23,7 +23,7 @@ const getMenu = async () => {
             const appendLocation = document.querySelector('#menu-page .side-scroll-window');
             const sideScrollWindowItemContainer = document.createElement('div');
             sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${item._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${item.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${item.menuItemName}</h2><h3>${item.menuItemPrice}</h3><p>${item.menuItemDescription}</p></div>`;
+            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${item._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${item.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${item.menuItemName}</h2><h3>R${item.menuItemPrice}</h3><p>${item.menuItemDescription}</p></div>`;
             appendLocation.append(sideScrollWindowItemContainer);
         });
     }
