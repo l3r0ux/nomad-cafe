@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/desktop.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>Nomad Cafe</title>
+</head>
+
+<body>
+    <nav>
+        <div id="navbar">
+            <h1 id="title">Nomad Cafe</h1>
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <aside id="nav-items" class="desktop-nav mobile-nav__hidden">
+            <a>Home</a>
+            <a>Welcome</a>
+            <a>Menu</a>
+            <a>Events</a>
+            <a>Gallery</a>
+            <a>Location</a>
+            <a>Contact</a>
+        </aside>
+    </nav>
+
+    <main>
+        <section id="landing-page" class="page-helper">
+            <div class="main-content-container">
+                <div id="nomad-cafe-logo">
+                    <img src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png"
+                        alt="logo">
+                    <p>We bring coffee to you, anywhere, anytime!</p>
+                </div>
+            </div>
+            <a class="page-nav-helper-buttons next-screen">Next</a>
+        </section>
+
+        <section id="welcome-page" class="page-helper">
+            <div class="main-content-container">
+                <p>Welcome to Nomad cafe</p>
+                <p>No Road too Rough, No Late too Smooth</p>
+                <p>
+                    No matter how remote, off the grid or far, we will be able to make barista quality coffee. With our
+                    flagship "go anywhere" Defender, we will get there! We specialise in events ranging from corporate
+                    functions, weddings, too cycling races and anything in between. The vibe we bring to events are like
+                    no other. Our beans are sourced from a local roaster with incredible talent, having the option to
+                    add a unique flavour to your event.
+                </p>
+            </div>
+            <a class="page-nav-helper-buttons prev-screen">Previous</a>
+            <a class="page-nav-helper-buttons next-screen">Next</a>
+        </section>
+
+        <section id="menu-page" class="page-helper">
+            <h2>Our Menu:</h2>
+            <div class="side-scroll-window">
+                <!-- Menu Items to be rendered here -->
+            </div>
+            <div class="scroll-left-and-right">
+                <img id="menu-left"
+                    src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/arrow-left_neqh9s.png"
+                    alt="left-arrow">
+                <img id="menu-right"
+                    src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/arrow-right_aciyfz.png"
+                    alt="right-arrow">
+            </div>
+            <a class="page-nav-helper-buttons prev-screen">Previous</a>
+            <a class="page-nav-helper-buttons  next-screen">Next</a>
+        </section>
+
+        <section id="events-page" class="page-helper">
+            <h2>See where we will be:</h2>
+            <div class="side-scroll-window">
+                <!-- Events to be rendered here -->
+            </div>
+            <div class="scroll-left-and-right">
+                <img id="events-left"
+                    src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/arrow-left_neqh9s.png"
+                    alt="left-arrow">
+                <img id="events-right"
+                    src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/arrow-right_aciyfz.png"
+                    alt="right-arrow">
+            </div>
+            <a class="page-nav-helper-buttons prev-screen">Previous</a>
+            <a class="page-nav-helper-buttons next-screen">Next</a>
+        </section>
+
+        <section id="gallery-page" class="page-helper">
+            <h2>Gallery:</h2>
+            <div class="side-scroll-window">
+                <!-- Gallery images to be rendered here -->
+            </div>
+            <div class="scroll-left-and-right">
+                <img id="gallery-left"
+                    src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/arrow-left_neqh9s.png"
+                    alt="left-arrow">
+                <img id="gallery-right"
+                    src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/arrow-right_aciyfz.png"
+                    alt="right-arrow">
+            </div>
+            <a class="page-nav-helper-buttons prev-screen">Previous</a>
+            <a class="page-nav-helper-buttons next-screen">Next</a>
+        </section>
+
+        <section id="location-page" class="page-helper">
+            <h2>See where we are right now:</h2>
+            <div id="location-page__map" class="side-scroll-window">
+                <div id="mapbox">
+                    <!-- Location to be rendered here -->
+                </div>
+            </div>
+            <a class="page-nav-helper-buttons prev-screen">Previous</a>
+            <a class="page-nav-helper-buttons next-screen">Next</a>
+        </section>
+
+        <section id="contact-page" class="page-helper">
+            <h2>Want to book an event or find out more? Contact us!</h2>
+            <div id="form-toggle">
+                <span id="contact-section" class="form-toggle__buttons form-button__toggled">Contact Us</span>
+                <span id="email-section" class="form-toggle__buttons">Subscribe For Updates</span>
+            </div>
+            <div class="main-content-container">
+                <!-- CONTACT FORM MARKUP -->
+                <form action="#" method="POST" id="contact-form" name="contact-form" class="form-helper" enctype="multipart/form-data">
+                    <label>Our Number:</label>
+                    <label>123 456 7890</label>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" >
+                    <label for="contactEmail">Email:</label>
+                    <input type="text" id="contactEmail" name="email" >
+                    <label for="message">Message:</label>
+                    <textarea style="resize: none" name="message" id="message" cols="35" rows="10" ></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <!-- SUBSCRIBE FORM MARKUP -->
+                <div id="subscribe-form-container" class="hide-form">
+                    <h2 id="subscribe-text">Subscribe to get notifications for upcoming events.</h2>
+                    <form action="#" method="POST" id="subscribe-form" name="subscribe-form" class="form-helper"
+                        enctype="multipart/form-data">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName">
+                        <label for="subscribeEmail">Email:</label>
+                        <input type="text" id="subscribeEmail" name="email">
+                        <button type="submit">Keep Me Updated</button>
+                        <img id="subscribe-form__logo-mobile"
+                            src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png"
+                            alt="logo">
+                    </form>
+                    <img id="subscribe-form__logo-desktop"
+                        src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png"
+                        alt="logo">
+                </div>
+            </div>
+            <a class="page-nav-helper-buttons prev-screen">Previous</a>
+            <a id="to-top" class="page-nav-helper-buttons">Back to top</a>
+        </section>
+    </main>
+
+    <!-- LOADING SPINNER -->
+    <div id="loading-indicator__container">
+        <div id="loading-indicator">
+            <img src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png" alt="loading">
+        </div>
+    </div>
+
+    <footer id="footer" class="page-helper">
+        <a id="close-footer">Close Footer</a>
+        <p>NOMAD CAFE 2020&copy;</p>
+        <a id="admin-login" href="/admin/login">Admin Login</a>
+    </footer>
+</body>
+<script src="./javascripts/indexRequests.js"></script>
+<script src="./javascripts/index.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+</html>

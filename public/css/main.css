@@ -1,0 +1,924 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #1D1007;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --window-height: ;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1D1007;
+    height: 4rem;
+    width: 100%;
+    padding: 0 5% 0 5%;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    transition: top 300ms;
+}
+
+#title {
+    color: white;
+}
+
+#nav-items a {
+    margin: 10% 0 10% 0;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.main-content-container {
+    margin: 10% auto 5% auto;
+    padding: 0 5% 0 5%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#landing-page .main-content-container {
+    padding-top: 20%;
+    justify-content: flex-start;
+}
+
+#welcome-page .main-content-container p:first-of-type {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+#welcome-page .main-content-container p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#welcome-page .main-content-container p:nth-of-type(3) {
+    font-size: 1.4rem;
+}
+
+#welcome-page .main-content-container * {
+    margin: 3% 0 3% 0;
+    line-height: 1.6rem;
+}
+
+#contact-page .main-content-container {
+    margin-top: 0;
+    height: fit-content;
+}
+
+#nomad-cafe-logo {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto 2% auto;
+}
+
+#nomad-cafe-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#nomad-cafe-logo p {
+    font-size: 1.5rem;
+}
+
+.page-helper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--window-height);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 -8px 25px 5px rgba(0, 0, 0, 0.5);
+}
+
+#landing-page {
+    background-color: #ECE0D1;
+    z-index: 0;
+}
+
+#welcome-page {
+    background-color: #D5C7B7;
+    z-index: 1;
+}
+
+#menu-page {
+    align-items: center;
+    background-color: #BEAD9C;
+    z-index: 2;
+}
+
+#events-page {
+    align-items: center;
+    background-color: #A89482;
+    z-index: 3;
+}
+
+#gallery-page {
+    align-items: center;
+    background-color: #917B67;
+    z-index: 4;
+}
+
+#location-page {
+    align-items: center;
+    background-color: #7A614D;
+    z-index: 5;
+}
+
+#contact-page {
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    background-color: #634832;
+    z-index: 6;
+    text-align: center;
+}
+
+#contact-page h2 {
+    padding-bottom: 2rem;
+}
+
+#form-toggle {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 16.8rem;
+}
+
+.form-helper {
+    padding: 0.2rem;
+    display: grid;
+    width: 16.8rem;
+    height: 23rem;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+    gap: 0.5rem;
+    border-radius: 1rem;
+    background-color: #917B67;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#contact-form {
+    grid-template-rows: repeat(7, 1rem);
+
+}
+
+
+
+#subscribe-form {
+    grid-template-rows: repeat(4, 1.5rem);
+
+}
+
+#subscribe-text {
+    display: none;
+    color: #1D1007;
+}
+
+#subscribe-form__logo-desktop {
+    display: none;
+}
+
+#subscribe-form__logo-mobile {
+    width: 10rem;
+    height: 10rem;
+    justify-self: center;
+}
+
+.popup-helper__container {
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+
+.popup-helper__contents {
+    background-color: #7A614D;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    width: 20rem;
+    text-align: center;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+}
+
+.validation-feedback__faded {
+    opacity: 0;
+    position: absolute;
+    transition: all 500ms ease;
+}
+
+.validation-feedback {
+    cursor: pointer;
+    transform: translate(-10%, 0);
+    transition: all 500ms ease;
+    opacity: 1;
+    transition: all 500ms ease;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    border: 1px solid black;
+    z-index: 1000;
+    background-color: rgba(255, 100, 100, 0.9);
+    box-shadow: 1px 1px 10px black;
+    border-radius: 2rem;
+    border-top-left-radius: 0;
+    padding: 0.3rem;
+}
+
+.hide-form {
+    display: none !important;
+}
+
+.form-toggle__buttons {
+    z-index: 1;
+    cursor: pointer;
+    transition: 200ms all ease;
+    color: white;
+    background-color: #1D1007;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0.4rem
+}
+
+#contact-section {
+    flex: 3;
+}
+
+#email-section {
+    flex: 6;
+}
+
+#contact-form label,
+#subscribe-form label,
+#menu-add-form label,
+#menu-update-form label,
+#event-add-form label,
+#event-update-form label,
+#gallery-form label,
+#location-form label,
+#delete-form label {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button,
+.popup-helper__contents button,
+#subscribe-form button,
+#subscribe-form input,
+#subscribe-form textarea,
+#menu-add-form input,
+#menu-add-form textarea,
+#menu-add-form button,
+#menu-update-form input,
+#menu-update-form textarea,
+#menu-update-form button,
+#event-add-form input,
+#event-add-form textarea,
+#event-add-form button,
+#event-update-form input,
+#event-update-form textarea,
+#event-update-form button,
+#gallery-form button,
+#location-form button,
+#delete-form button {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+
+#contact-form button,
+.popup-helper__contents button,
+#subscribe-form button,
+#menu-add-form button,  
+#menu-update-form button,  
+#event-add-form button,
+#event-update-form button,
+#gallery-form button,
+#location-form button,
+#delete-form button {
+    padding: 0.4rem;
+    color: white;
+    border-radius: 1rem;
+    background-color: #1D1007;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+}
+
+.form-button__toggled {
+    background-color: #917B67 !important;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus,
+#subscribe-form input:focus,
+#subscribe-form textarea:focus,
+#menu-add-form input:focus,
+#menu-add-form textarea:focus,
+#menu-update-form input:focus,
+#menu-update-form textarea:focus,
+#event-add-form input:focus
+#event-add-form textarea:focus,
+#event-update-form input:focus
+#event-update-form textarea:focus {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    background: #ECE0D1;
+}
+
+.side-scroll-window {
+    border-radius: 10px;
+    position: relative;
+    width: 21rem;
+    height: 21rem;
+    background-color: rgba(100, 100, 100, 0.3);
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    box-shadow: 8px 8px 15px 3px rgba(0, 0, 0, 0.5);
+}
+
+#location-page .side-scroll-window {
+    overflow: hidden;
+}
+
+.side-scroll-window__item {
+    scroll-snap-align: start;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    position: relative;
+}
+
+.page-helper h2 {
+    padding: 0 0 0 1rem;
+    color: white;
+}
+
+#menu-page .side-scroll-window {
+    height: 28rem;
+}
+
+.menu-item__image {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75%;
+}
+
+.menu-item__description {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 25%;
+    background-color: #BEAD9C;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    overflow: auto;
+}
+
+.menu-item__description h2 {
+    padding: 0;
+    color: #1D1007;
+}
+
+.event-container {
+    width: 50%;
+    height: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
+    float: right;
+    margin: 1rem 2.5rem 1rem 0;
+    white-space: normal;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    background-color: #1D1007;
+    color: white;
+    overflow: auto;
+}
+
+.events-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    margin: 0.5rem auto 1rem auto;
+    text-align: center;
+    background-color: #ECE0D1;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.event-image {
+    height: 100%;
+    width: 100%;
+}
+
+.event-details {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    color: #ECE0D1;
+}
+
+.gallery-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+}
+
+#location-page__map {
+    display: flex;
+    white-space: normal;
+    scroll-snap-type: none;
+    overflow: auto;
+    position: relative;
+}
+
+#location-page__map #mapbox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#location-page__map > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    position: absolute;
+}
+
+#location-page__map h2 {
+    z-index: 1;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    justify-self: center !important;
+    align-self: center !important;
+    text-align: center;
+}
+
+.scroll-left-and-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 21rem;
+    height: 8%;
+    z-index: 3;
+    
+}
+
+img[src*="arrow"] {
+    width: 2.1rem;
+    height: 2.1rem;
+    transition: opacity 200ms;
+    background-color: #BEAD9C;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 black;
+    margin: 0 5px 0 5px;
+    transition: all 200ms ease;
+}
+img[src*="arrow"]:hover {
+    width: 2.3rem;
+    height: 2.3rem;
+    transition: all 200ms ease;
+}
+
+.page-nav-helper-buttons {
+    position: absolute;
+    bottom: 2%;
+    padding: 0.4rem;
+    color: white;
+    border-radius: 1rem;
+    background-color: #1D1007;
+    text-decoration: none;
+}
+
+.next-screen {
+    right: 0;
+    text-align: end;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.prev-screen {
+    left: 0;
+    text-align: start;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+#to-top {
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.toggle-fixed {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+.nav-highlight {
+    color: #917B67 !important;
+    transition: color 200ms;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 7;
+    background-color: #1D1007;
+    color: white;
+    height: 4rem;
+}
+
+#footer p,
+#footer a {
+    color: white;
+    z-index: 8;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* ATTRIBUTION FOR ICONS */
+#attribution {
+    color: white;
+    font-size: 0.8rem;
+}
+#attribution a {
+    margin: 0;
+}
+
+/* Loading spinner related styles */
+#loading-indicator__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 200ms ease;
+}
+#loading-indicator {
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loading-indicator img {
+    width: inherit;
+    transform: rotateZ(0);
+    animation-name: animate-loader;
+    animation-duration: 1500ms;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: infinite;
+}
+.is-loading {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+@keyframes animate-loader {
+    0% {
+        width: 8rem;
+        transform: rotateZ(0);
+    }
+    50% {
+        width: 10rem;
+        transform: rotateZ(180deg);
+    }
+    100% {
+        width: 8rem;
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Galaxy fold (max-width property didnt wanna work on event container) */
+@media (max-width: 320px) {
+    #nomad-cafe-logo {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .side-scroll-window {
+        width: 17rem;
+    }
+
+    .scroll-left-and-right {
+        width: 17rem;
+    }
+
+    #to-top {
+        display: none;
+    }
+}
+
+/* Tablet portrait */
+@media (min-width: 767px) {
+    #nomad-cafe-logo {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    #navbar {
+        height: 4rem;
+    }
+
+    #nav-items a {
+        font-size: 1.5rem;
+    }
+
+    #contact-page {
+        justify-content: center;
+    }
+
+    #welcome-page .main-content-container p:first-of-type {
+        font-size: 2rem;
+    }
+
+    #welcome-page .main-content-container p:nth-of-type(2) {
+        font-size: 1.9rem;
+    }
+    
+    #welcome-page .main-content-container p:nth-of-type(3) {
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+    
+    #welcome-page .main-content-container * {
+        margin: 4% 0 4% 0;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+
+    #menu-page .side-scroll-window {
+        height: 48rem;
+    }
+
+    .menu-item__description h2 {
+        padding: 0.5rem 0 1rem 0;
+    }
+
+    .menu-item__description h3 {
+        padding: 0rem 0 1rem 0;
+    }
+
+    .menu-item__description p {
+        font-size: 1.2rem;
+    }
+    
+    .event-details {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.7rem;
+        font-size: 1.2rem;
+    }
+
+    .scroll-left-and-right {
+        width: 36rem;
+    }
+
+    .side-scroll-window {
+        width: 36rem;
+        height: 36rem;
+    }
+}
+
+/* special case where mobile phone in landscape */
+/* this media query is after the tablet portrait mode in order to override those styles should this condition be met
+even if the min width is more than 767 */
+@media (max-height: 420px) and (min-width: 500px) {
+    * {
+        font-size: 0.7rem;
+    }
+
+    #title {
+        font-size: 1rem;
+    }
+
+    #navbar {
+        height: 13%;
+    }
+
+    #nav-items a {
+        margin: 2% 0 2% 0;
+    }
+
+    .mobile-nav__hidden {
+        padding-top: 8%;
+    }
+
+    #nomad-cafe-logo {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .page-helper h2 {
+        font-size: 1rem;
+    }
+
+    #welcome-page .main-content-container p:first-of-type {
+        font-size: 1.4rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    #welcome-page .main-content-container p:nth-of-type(2) {
+        font-size: 1.3rem;
+    }
+    
+    #welcome-page .main-content-container p:nth-of-type(3) {
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    #landing-page .main-content-container,
+    .main-content-container {
+        padding-top: 6%;
+        margin: 0;
+    }
+
+    #welcome-page .main-content-container * {
+        line-height: 1.3rem;
+        margin: 0.7rem;
+        padding: 0 2rem 0 2rem;
+        font-size: 1.2rem;
+    }
+
+    .side-scroll-window {
+        width: 16rem;
+        height: 16rem;
+        margin-top: 0.5rem;
+    }
+
+    #menu-page .side-scroll-window {
+        height: 19rem;
+    }
+
+    .scroll-left-and-right {
+        width: 16rem;
+    }
+
+    #contact-page .main-content-container {
+        padding-top: 0;
+        height: fit-content;
+    }
+
+    #contact-page h2 {
+        padding-bottom: 0.5rem;
+    }
+
+    #contact-form,
+    #subscribe-form {
+        width: 18rem;
+        height: 15rem;
+        border-radius: 1rem;
+    }
+
+    #contact-form label,
+    #subscribe-form label {
+        font-size: 1rem;
+    }
+
+    #contact-form textarea,
+    #subscribe-form textarea {
+        height: 2rem;
+    }
+
+    #subscribe-form__logo-mobile {
+        width: 4rem;
+        height: 4rem;
+        justify-self: center;
+    }
+
+    .main-content-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #contact-page h2 {
+        display: none;
+    }
+
+    #hamburger {
+        height: 2rem;
+    }
+
+    #hamburger span {
+        border: 2px solid white !important;
+        margin: 2px 0 2px 0 !important;
+    }
+
+    #to-top {
+        display: none;
+    }
+}
+
+/* Mobile nav bar */
+@media (max-width: 1023px) {
+    .hide-navbar {
+        top: -32% !important;
+    }
+
+    .mobile-nav__hidden {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: -50%;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background-color: #593C1F;
+        transition: right 300ms;
+        z-index: 150;
+    }
+
+    .mobile-nav__visible {
+        right: 0;
+    }
+
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 3.5rem;
+        height: 70%;
+        cursor: pointer;
+        z-index: 300;
+        transition: transform 300ms;
+    }
+
+    .hamburger-rotate {
+        transform: rotate(-270deg);
+    }
+
+    #hamburger span {
+        border: 3px solid white;
+        border-radius: 10px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        width: 80%;
+        height: 5px;
+    }
+}
