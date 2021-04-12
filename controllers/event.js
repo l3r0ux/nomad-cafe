@@ -55,7 +55,7 @@ module.exports.postEvent = async (req, res) => {
                         from: 'Nomadcafesa@gmail.com',
                         subject: `New Upcoming Event from Nomad Cafe`,
                         // Have API endpoint that deals with unsubscribing a subscriber
-                        html: `<h3>Good day ${subscriber.firstName}</h3><p style="margin-bottom: 8px">We will be attending the following event:</p><p style="margin-bottom: 3px">Event Name: "${saved.eventName}"</p><p style="margin-bottom: 3px">Event Location: "${saved.eventLocation}"</p><p style="margin-bottom: 3px">Event Date: "${saved.eventDate}"</p><p style="color: #A9A9A9">Click <a href="http://localhost:3000/subscriber/delete/${subscriber.token}"><i>here</i></a> to unsubscribe</p>`
+                        html: `<h3>Good day ${subscriber.firstName}</h3><p style="margin-bottom: 8px">We will be attending the following event:</p><p style="margin-bottom: 3px">Event Name: "${saved.eventName}"</p><p style="margin-bottom: 3px">Event Location: "${saved.eventLocation}"</p><p style="margin-bottom: 3px">Event Date: "${saved.eventDate}"</p><p style="color: #A9A9A9">Click <a href="https://desolate-cliffs-52488.herokuapp.com//subscriber/delete/${subscriber.token}"><i>here</i></a> to unsubscribe</p>`
                     }
                     // Sending mail
                     await sgMail.send(message)
@@ -113,7 +113,7 @@ module.exports.updateEvent = async (req, res) => {
                         from: 'Nomadcafesa@gmail.com',
                         subject: `An Events Details Has Been Updated`,
                         // Have API endpoint that deals with unsubscribing a subscriber
-                        html: `<h2>Good day ${subscriber.firstName}</h2><p style="margin-bottom: 8px">The updated events new details are:</p><p style="margin-bottom: 2px">Event Name: "${updatedEvent.eventName}"</p><p style="margin-bottom: 2px">Event Location: "${updatedEvent.eventLocation}"</p><p style="margin-bottom: 2px">Event Date: "${updatedEvent.eventDate}"</p><p style="color: #A9A9A9">Click <a href="http://localhost:3000/subscriber/delete/${subscriber.token}"><i>here</i></a> to unsubscribe</p>`
+                        html: `<h2>Good day ${subscriber.firstName}</h2><p style="margin-bottom: 8px">The updated events new details are:</p><p style="margin-bottom: 2px">Event Name: "${updatedEvent.eventName}"</p><p style="margin-bottom: 2px">Event Location: "${updatedEvent.eventLocation}"</p><p style="margin-bottom: 2px">Event Date: "${updatedEvent.eventDate}"</p><p style="color: #A9A9A9">Click <a href="https://desolate-cliffs-52488.herokuapp.com//subscriber/delete/${subscriber.token}"><i>here</i></a> to unsubscribe</p>`
                     }
                     await sgMail.send(message)
                 }
@@ -149,7 +149,7 @@ module.exports.deleteEvent = async (req, res) => {
                     from: 'Nomadcafesa@gmail.com',
                     subject: `An Event Has Been Canceled`,
                     // Have API endpoint that deals with unsubscribing a subscriber
-                    html: `<h2>Good day ${subscriber.firstName}</h2><p style="margin-bottom: 8px">Unfortunately, we will not be attending the following event any longer:</p><p style="margin-bottom: 3px">Event Name:"${deleted.eventName}"</p><p style="margin-bottom: 3px">Event Date:"${deleted.eventDate}"</p><p style="margin-bottom: 3px">Event Location:"${deleted.eventLocation}"</p><p style="color: #A9A9A9">Click <a href="http://localhost:3000/subscriber/delete/${subscriber.token}"><i>here</i></a> to unsubscribe</p>`
+                    html: `<h2>Good day ${subscriber.firstName}</h2><p style="margin-bottom: 8px">Unfortunately, we will not be attending the following event any longer:</p><p style="margin-bottom: 3px">Event Name:"${deleted.eventName}"</p><p style="margin-bottom: 3px">Event Date:"${deleted.eventDate}"</p><p style="margin-bottom: 3px">Event Location:"${deleted.eventLocation}"</p><p style="color: #A9A9A9">Click <a href="https://desolate-cliffs-52488.herokuapp.com//subscriber/delete/${subscriber.token}"><i>here</i></a> to unsubscribe</p>`
                 }
                 await sgMail.send(message)
             };

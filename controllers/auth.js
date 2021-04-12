@@ -36,7 +36,7 @@ module.exports.login = async (req, res) => {
             const foundAdmin = await Admin.findAndValidate(username, password);
             if (foundAdmin) {
                 req.session.admin_id = foundAdmin._id;
-                res.redirect('/admin');
+                return res.redirect('/admin');
             } else {
                 res.redirect('/admin/login');
             }

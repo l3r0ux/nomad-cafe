@@ -21,7 +21,8 @@ const galleryRoutes = require('./routes/gallery');
 const locationRoutes = require('./routes/location');
 const subscriberRoutes = require('./routes/subscriber');
 const { strict } = require('assert');
-const dbUrl = process.env.DBNAME;
+
+const dbUrl = process.env.DBNAME || 'mongodb://localhost:27017/nomadCafe';
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -40,14 +41,14 @@ const sessionConfig = {
     store: MongoStore.create({
         // put in process.env
         mongoUrl: dbUrl,
-        secret: process.env.MONGOSTORESECRET,
+        secret: process.env.MONGOSTORESECRET || 'devbackup',
         touchAfter: 24 * 60 * 60
     }),
     sameSite: strict,
     secret: process.env.SECRET,
     resave: false,
     // this is for https, enable when deploy !!!!!!!!!!!!!!!!!!!!!!
-    // secure: true,
+    secure: true,
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
