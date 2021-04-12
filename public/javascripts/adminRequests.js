@@ -376,7 +376,7 @@ const postLocation = async (coordinates, submittedForm) => {
             .setLngLat([longitude, latitude])
             .addTo(map)
 
-        return feedbackModal("Location succesfully added.", "OP");
+        return feedbackModal("Location succesfully added.", "OK");
     }
 }
 
@@ -397,6 +397,7 @@ const deleteLocation = async (submittedForm) => {
         return feedbackModal("Oops! <br> Something went wrong deleting the location.", "GO BACK", "style='background-color: #912e29'")
     }
     else {
+        loadingIndicator.classList.remove('is-loading');
         submittedForm.classList.add('hidden');
         document.getElementById('mapbox').innerHTML = '';
         const h2 = document.createElement('h2');

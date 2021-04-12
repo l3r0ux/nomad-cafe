@@ -137,6 +137,7 @@ sideScrollWindows.forEach((window) => {
                         deleteForm.classList.add('hidden');
                         return deleteForm.removeEventListener('click', stopExecution);
                     } else {
+                        loadingIndicator.classList.add('is-loading');
                         deleteLocation(deleteForm);
                     }
                     deleteForm.removeEventListener('click', stopExecution);

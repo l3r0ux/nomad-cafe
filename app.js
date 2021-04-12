@@ -21,8 +21,9 @@ const galleryRoutes = require('./routes/gallery');
 const locationRoutes = require('./routes/location');
 const subscriberRoutes = require('./routes/subscriber');
 const { strict } = require('assert');
+const dbUrl = process.env.DBNAME;
 
-mongoose.connect(process.env.DBNAME, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGOOSE CONNECTED")
     })
@@ -38,7 +39,9 @@ const sessionConfig = {
     // storing session data in mongo
     store: MongoStore.create({
         // put in process.env
-        mongoUrl: process.env.DBNAME
+        mongoUrl: dbUrl,
+        secret: process.env.MONGOSTORESECRET,
+        touchAfter: 24 * 60 * 60
     }),
     sameSite: strict,
     secret: process.env.SECRET,
