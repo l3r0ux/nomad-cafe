@@ -463,6 +463,14 @@ html {
     color: #ECE0D1;
 }
 
+.delete-item {
+    display: none;
+}
+
+.edit-item {
+    display: none;
+}
+
 .gallery-image {
     object-fit: cover;
     width: 100%;
