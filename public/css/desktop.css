@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* tablet landscape */
 @media (min-width: 1024px) {
     .desktop-nav {
@@ -37,9 +44,9 @@
     }
 
     #landing-page {
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(80, 68, 18, 0.6)), to(transparent)),
-            url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
         background: -o-linear-gradient(bottom, rgba(80, 68, 18, 0.6) 10%, transparent),
+            url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(80, 68, 18, 0.6)), to(transparent)),
             url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
         background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
             url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
@@ -628,6 +635,12 @@
         -ms-grid-column-align: start;
         place-self: start;
         width: 10rem;
+    }
+
+    #fullName,
+    #contactEmail,
+    #message {
+        width: 24rem;
     }
 
     #subscribe-form {
