@@ -189,17 +189,15 @@ const subscribeCustomer = async (formData, submittedForm) => {
         // display error modal
         // remove loading spinner
         loadingIndicator.classList.remove('is-loading');
-        submittedForm.reset();
         return feedbackModal("Oops! <br> Something went wrong subscribing. Try again later", "GO BACK", "style='background-color: #912e29'");
     } else if (data.alreadySub) {
         // modal for already subbed
-        submittedForm.reset();
+        loadingIndicator.classList.remove('is-loading');
         return feedbackModal(`${data.alreadySub}`, "OK");
     } else {
         // remove loading spinner
         loadingIndicator.classList.remove('is-loading');
         // display successfully subbed
-        submittedForm.reset();
         return feedbackModal("Thank you for subscribing! You will now receive updates on upcoming events.", "OK");
     }
 }
