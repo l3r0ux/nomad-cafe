@@ -226,8 +226,8 @@
     }
 
     #contact-page .main-content-container {
-        width: 39rem;
-        height: 32rem;
+        width: 38.5rem;
+        height: 31.5rem;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -242,11 +242,11 @@
     }
 
     .page-helper h2 {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 
     #form-toggle {
-        width: 39rem;
+        width: 38.5rem;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -909,7 +909,7 @@
 
     #gallery-page h2 {
         margin: 0 auto 0 15%;
-        padding-left: 14rem;
+        padding-left: 13rem;
     }
 
     #location-page h2 {
@@ -919,17 +919,17 @@
 
     .side-scroll-window {
         overflow-x: hidden;
-        width: 32rem;
-        height: 31rem;
+        width: 30rem;
+        height: 29rem;
     }
 
     #menu-page .side-scroll-window {
-        height: 32rem;
-        width: 52rem;
+        height: 30rem;
+        width: 50rem;
     }
 
     #menu-page .scroll-left-and-right {
-        width: 52rem;
+        width: 50rem;
     }
 
     #events-page .side-scroll-window {
@@ -938,7 +938,7 @@
     }
 
     #events-page .scroll-left-and-right {
-        width: 32rem;
+        width: 30rem;
         /* end at 15% and opacity 1 */
         margin: 0 10% 0 auto;
     }
@@ -949,7 +949,7 @@
     }
 
     #gallery-page .scroll-left-and-right {
-        width: 32rem;
+        width: 30rem;
         /* end at 15% and opacity 1 */
         margin: 0 auto 0 10%;
     }
