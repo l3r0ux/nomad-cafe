@@ -7,7 +7,7 @@ const navDisplay = document.querySelector('#nav-items');
 const hamburger = document.getElementById('hamburger');
 const prevScreen = document.querySelectorAll('.prev-screen');
 const nextScreen = document.querySelectorAll('.next-screen');
-const toTop = document.querySelector('#to-top');
+
 
 // All pages
 const pages = document.querySelectorAll('.page-helper');
@@ -330,10 +330,6 @@ navTags.forEach((tag, i) => {
     tag.addEventListener('click', () => {
         scrollToPage(i)
     });
-});
-
-toTop.addEventListener('click', () => {
-    window.scrollTo(0, 0);
 });
 
 // for switching between tablet portrait and landscape, that slide in animations don't break

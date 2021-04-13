@@ -684,14 +684,6 @@ img[src*="arrow"]:hover {
     cursor: pointer;
 }
 
-#to-top {
-    text-align: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    cursor: pointer;
-}
-
 .toggle-fixed {
     position: fixed !important;
     top: 0 !important;
@@ -865,10 +857,6 @@ img[src*="arrow"]:hover {
 
     .scroll-left-and-right {
         width: 17rem;
-    }
-
-    #to-top {
-        display: none;
     }
 }
 
@@ -1071,10 +1059,6 @@ even if the min width is more than 767 */
     #hamburger span {
         border: 2px solid white !important;
         margin: 2px 0 2px 0 !important;
-    }
-
-    #to-top {
-        display: none;
     }
 }
 
