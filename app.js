@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
 // for generating random token for subscribers
 const session = require('express-session');
 // Helmet is for security
-// const helmet = require('helmet');
+const helmet = require('helmet');
 const MongoStore = require('connect-mongo');
 const errorTemplate = require('./views/error');
 const app = express();
@@ -60,46 +60,52 @@ const sessionConfig = {
 
 // This automatically enables all 11 of the middlewares that helmet comes with
 // Content recurity policy designates what sources are allowed to get information from
-// app.use(helmet());
-// const scriptSrcUrls = [
-//     "https://api.mapbox.com/",
-//     "https://api.tiles.mapbox.com/",
-// ];
-// const styleSrcUrls = [
-//     "https://api.mapbox.com/",
-//     "https://api.tiles.mapbox.com/",
-//     "https://fonts.googleapis.com/",
-//     "https://fonts.gstatic.com",
-// ];
-// const connectSrcUrls = [
-//     "https://api.mapbox.com/",
-//     "https://a.tiles.mapbox.com/",
-//     "https://b.tiles.mapbox.com/",
-//     "https://events.mapbox.com/",
-// ];
-// const fontSrcUrls = [
-//     "https://fonts.googleapis.com/",
-//     "https://fonts.gstatic.com",
-// ];
-// app.use(
-//     helmet.contentSecurityPolicy({
-//         directives: {
-//             defaultSrc: [],
-//             connectSrc: ["'self'", ...connectSrcUrls],
-//             scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
-//             styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
-//             workerSrc: ["'self'", "blob:"],
-//             objectSrc: [],
-//             imgSrc: [
-//                 "'self'",
-//                 "blob:",
-//                 "data:",
-//                 "https://res.cloudinary.com/djkyfcfl1/",
-//             ],
-//             fontSrc: ["'self'", ...fontSrcUrls],
-//         },
-//     })
-// );
+app.use(helmet());
+const scriptSrcUrls = [
+    "https://api.mapbox.com/",
+    "https://api.tiles.mapbox.com/",
+];
+const styleSrcUrls = [
+    "https://api.mapbox.com/",
+    "https://api.tiles.mapbox.com/",
+    "https://fonts.googleapis.com/",
+    "https://fonts.gstatic.com",
+];
+const connectSrcUrls = [
+    "https://api.mapbox.com/",
+    "https://a.tiles.mapbox.com/",
+    "https://b.tiles.mapbox.com/",
+    "https://events.mapbox.com/",
+];
+const fontSrcUrls = [
+    "https://fonts.googleapis.com/",
+    "https://fonts.gstatic.com",
+];
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: [],
+            connectSrc: ["'self'", ...connectSrcUrls],
+            scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
+            styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+            workerSrc: ["'self'", "blob:"],
+            childSrc: ["'blob'"],
+            objectSrc: [],
+            imgSrc: [
+                "'self'",
+                "blob:",
+                "data:",
+                "https://res.cloudinary.com/djkyfcfl1/",
+            ],
+            fontSrc: ["'self'", ...fontSrcUrls],
+        },
+    })
+);
+app.use(
+    helmet.referrerPolicy({
+        policy: "origin"
+    })
+)
 
 app.use(session(sessionConfig));
 app.use(express.static(path.join(__dirname, 'public')));
