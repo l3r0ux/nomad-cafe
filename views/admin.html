@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/desktop.css">
     <link rel="stylesheet" href="/css/admin.css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <title>Nomad Cafe</title>
@@ -139,11 +140,12 @@
                 </div>
             </div>
             <div id="location-page__map" class="side-scroll-window">
-                <div id="mapbox"></div>
+                <div id="map">
+                    <!-- Location to be rendered here -->
+                </div>
                 <div class="delete-item button-helper location-delete">
                     <img class="location-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png">
                 </div>
-                <!-- Location to be rendered here -->
             </div>
             <a class="page-nav-helper-buttons prev-screen">Previous</a>
             <a class="page-nav-helper-buttons next-screen">Next</a>
@@ -303,6 +305,5 @@
 <script src="/javascripts/index.js"></script>
 <script src="/javascripts/adminRequests.js"></script>
 <script src="/javascripts/admin.js"></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
 
 </html>

@@ -367,7 +367,7 @@ const postLocation = async (coordinates, submittedForm) => {
         }
         mapboxgl.accessToken = data.mapboxToken;
         var map = new mapboxgl.Map({
-            container: 'mapbox', // container id
+            container: 'map', // container id
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: [longitude, latitude], // starting position [lng, lat]
             zoom: 10 // starting zoom
@@ -399,7 +399,7 @@ const deleteLocation = async (submittedForm) => {
     else {
         loadingIndicator.classList.remove('is-loading');
         submittedForm.classList.add('hidden');
-        document.getElementById('mapbox').innerHTML = '';
+        document.getElementById('map').innerHTML = '';
         const h2 = document.createElement('h2');
         h2.append('Not Currently at an Event');
         let img = document.createElement('img');

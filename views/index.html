@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
     <link rel="shortcut icon" href="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/desktop.css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <title>Nomad Cafe</title>
@@ -116,7 +117,7 @@
         <section id="location-page" class="page-helper">
             <h2>See where we are right now:</h2>
             <div id="location-page__map" class="side-scroll-window">
-                <div id="mapbox">
+                <div id="map">
                     <!-- Location to be rendered here -->
                 </div>
             </div>
@@ -183,6 +184,4 @@
 </body>
 <script src="./javascripts/indexRequests.js"></script>
 <script src="./javascripts/index.js"></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-
 </html>

@@ -119,7 +119,7 @@ const getLocation = async () => {
         let lat = data.latitude;
         mapboxgl.accessToken = data.mapboxToken;
         var map = new mapboxgl.Map({
-            container: 'mapbox', // container id
+            container: 'map', // container id
             style: 'mapbox://styles/mapbox/streets-v11', // style URL
             center: [long, lat], // starting position [lng, lat]
             zoom: 10 // starting zoom
