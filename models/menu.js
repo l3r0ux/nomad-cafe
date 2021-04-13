@@ -13,8 +13,7 @@ const menuItemSchema = new mongoose.Schema({
         required: true
     },
     menuItemPrice: {
-        type: Number,
-        min: [0, 'Price can not be less than 0'],
+        type: String,
         required: true
     },
     menuItemDescription: {

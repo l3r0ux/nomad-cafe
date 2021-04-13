@@ -22,6 +22,7 @@ const locationRoutes = require('./routes/location');
 const subscriberRoutes = require('./routes/subscriber');
 const { strict } = require('assert');
 
+// mongodb+srv://dbAdminLeroux:PAHoAxm70YRniQLs@cluster0.wieco.mongodb.net/nomadCafe?retryWrites=true&w=majority
 const dbUrl = process.env.DBNAME;
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })

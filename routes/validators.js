@@ -94,8 +94,6 @@ module.exports = {
             }
         }).bail()
         .notEmpty().withMessage('&bull;Please Enter a Price.').bail()
-        .isFloat().withMessage('Price Must be a Number.').bail()
-        .isFloat({ gt: 0.0 }).withMessage('Price Must be Greater than 0.').bail()
         .trim(),
     checkItemDescription: check('menuItemDescription')
         .notEmpty().withMessage('&bull;Please Enter a Description.').bail()
