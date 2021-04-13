@@ -226,8 +226,8 @@
     }
 
     #contact-page .main-content-container {
-        width: 40rem;
-        height: 33rem;
+        width: 39rem;
+        height: 32rem;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -246,7 +246,7 @@
     }
 
     #form-toggle {
-        width: 40rem;
+        width: 39rem;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -985,40 +985,40 @@
 /* 1080p desktop */
 @media (min-width: 1920px) {
     .side-scroll-window {
-        width: 45rem;
-        height: 45rem;
+        width: 42rem;
+        height: 42rem;
     }
 
     #menu-page .side-scroll-window {
-        height: 45rem;
-        width: 65rem;
+        height: 42rem;
+        width: 62rem;
     }
 
     #menu-page .scroll-left-and-right {
-        width: 65rem;
+        width: 62rem;
     }
 
     #events-page .scroll-left-and-right {
-        width: 45rem;
+        width: 42rem;
     }
 
     #gallery-page .scroll-left-and-right {
-        width: 45rem;
+        width: 42rem;
     }
 
     #events-page h2 {
         margin: 0 15% 0 auto;
-        padding-right: 14rem;
+        padding-right: 13rem;
     }
 
     #gallery-page h2 {
         margin: 0 auto 0 15%;
-        padding-left: 22rem;
+        padding-left: 20rem;
     }
 
     #location-page h2 {
         margin: 0 15% 0 auto;
-        padding-right: 12rem;
+        padding-right: 11rem;
     }
 }
 
