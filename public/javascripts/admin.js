@@ -230,6 +230,7 @@ window.addEventListener('resize', () => {
     } else {
         for (let modal of allModals) {
             modal.children[0].classList.remove('mobile-keyboard-active');
+            navbar.classList.remove('hide-navbar');
         }
     }
 })
