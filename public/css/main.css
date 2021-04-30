@@ -146,6 +146,7 @@ html {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    touch-action: none;
     -webkit-box-shadow: 0 -8px 25px 5px rgba(0, 0, 0, 0.5);
             box-shadow: 0 -8px 25px 5px rgba(0, 0, 0, 0.5);
 }
@@ -744,6 +745,12 @@ img[src*="arrow"]:hover {
     font-size: 0.9rem;
 }
 
+#close-footer {
+    border-radius: 2rem;
+    background-color: #7A614D;
+    padding: 0.3rem;
+}
+
 /* ATTRIBUTION FOR ICONS */
 #attribution {
     color: white;
@@ -1057,6 +1064,7 @@ even if the min width is more than 767 */
     }
 
     #hamburger span {
+        background: white;
         border: 2px solid white !important;
         margin: 2px 0 2px 0 !important;
     }
@@ -1130,6 +1138,7 @@ even if the min width is more than 767 */
     }
 
     #hamburger span {
+        background-color: white;
         border: 3px solid white;
         border-radius: 10px;
         margin-top: 3px;

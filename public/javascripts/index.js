@@ -7,6 +7,8 @@ const navDisplay = document.querySelector('#nav-items');
 const hamburger = document.getElementById('hamburger');
 const prevScreen = document.querySelectorAll('.prev-screen');
 const nextScreen = document.querySelectorAll('.next-screen');
+const footer = document.querySelector('#footer');
+const closeFooter = document.querySelector('#close-footer');
 
 
 // All pages
@@ -332,6 +334,10 @@ navTags.forEach((tag, i) => {
     });
 });
 
+closeFooter.addEventListener('click', () => {
+    window.scrollBy(0, -footer.scrollHeight)
+})
+
 // for switching between tablet portrait and landscape, that slide in animations don't break
 window.addEventListener('resize', () => {
     // if switch from portrait to landscape, have side scroll windows in final position
@@ -377,11 +383,11 @@ window.addEventListener('scroll', () => {
     if (window.innerWidth < 1024) {
         let currentScrollPos = window.pageYOffset;
         if (currentScrollPos > prevScrollPos) {
-            navbar.classList.add('hide-navbar');
+            // navbar.classList.add('hide-navbar');
             navDisplay.classList.remove('mobile-nav__visible');
             hamburger.classList.remove('hamburger-rotate');
         } else {
-            navbar.classList.remove('hide-navbar');
+            // navbar.classList.remove('hide-navbar');
             navDisplay.classList.remove('mobile-nav__visible');
             hamburger.classList.remove('hamburger-rotate');
         }
