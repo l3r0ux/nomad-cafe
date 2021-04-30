@@ -450,6 +450,7 @@ html {
 }
 
 .side-scroll-window {
+    touch-action: none;
     border-radius: 10px;
     position: relative;
     width: 21rem;
