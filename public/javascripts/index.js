@@ -7,7 +7,7 @@ const navDisplay = document.querySelector('#nav-items');
 const hamburger = document.getElementById('hamburger');
 const prevScreen = document.querySelectorAll('.prev-screen');
 const nextScreen = document.querySelectorAll('.next-screen');
-const footer = document.querySelector('#footer');
+// const footer = document.querySelector('#footer');
 const closeFooter = document.querySelector('#close-footer');
 
 
@@ -335,7 +335,7 @@ navTags.forEach((tag, i) => {
 });
 
 closeFooter.addEventListener('click', () => {
-    window.scrollBy(0, -footer.scrollHeight)
+    scrollToPage(6)
 })
 
 // for switching between tablet portrait and landscape, that slide in animations don't break
@@ -360,9 +360,9 @@ window.addEventListener('resize', () => {
     }
 
     // Hide navbar when device flips, primarily for navbar to not be in way for admin
-    if (window.innerHeight < 420) {
-        navbar.classList.add('hide-navbar');
-    }
+    // if (window.innerHeight < 420) {
+    //     navbar.classList.add('hide-navbar');
+    // }
 
     // Dynamically set the pages' true height based on window height
     // Mobile browser top bar alters the size of the window page
