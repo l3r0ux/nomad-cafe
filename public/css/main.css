@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    touch-action: none;
 }
 
 :root {
@@ -146,7 +147,6 @@ html {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    touch-action: none;
     -webkit-box-shadow: 0 -8px 25px 5px rgba(0, 0, 0, 0.5);
             box-shadow: 0 -8px 25px 5px rgba(0, 0, 0, 0.5);
 }
