@@ -2,10 +2,6 @@
     --window-height: ;
 }
 
-html {
-    touch-action: none;
-}
-
 #navbar-title__and__logout {
     display: -webkit-box;
     display: -ms-flexbox;
