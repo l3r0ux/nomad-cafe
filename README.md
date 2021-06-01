@@ -28,9 +28,9 @@ Since the app is deployed and only admin users can log in, you have to set the a
 The following is a guide on how to get the app running on your local machine:
 
 * Download the source code.
-* Install node.js and mongodb if you do not have it already and make sure mongo server is running.
+* Install node.js,  git and mongodb if you do not have it already and make sure mongo server is running.
 * Open the project in your code editor of choice.
-* Run "npm install" to install all the dependencies for the project.
+* Open a terminal on the top level of the project, and run "npm install" to install all the dependencies for the project.
 * Make a ".env" file at the top most level of the project folder, type the following, and save: (enter your own api keys where you see "your key")
 
 SECRET=jysalnie  
