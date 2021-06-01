@@ -44,7 +44,7 @@ MONGOSTORESECRET=a-nee-a
 
 
 ### To get the API keys and setup:
-** Please note that at no point during account creation for these websites do you need to enter your banking credentials. All the API keys and email senders can be acquired without any payment. **
+**Please note that at no point during account creation for these websites do you need to enter your banking credentials. All the API keys and email senders can be acquired without any payment.**
 #### Mapbox:
 Create a mapbox account or log in, and use the "Default public token" as the api key for the .env file.
 #### SGMail(sendgrid):
