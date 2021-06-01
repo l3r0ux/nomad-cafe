@@ -15,7 +15,7 @@ Event listeners for deleting or updating the dynamically rendered items also nee
 I also implemented an authentication system with express sessions and cookies for the admin to log in.
 The admins' password are also hashed and salted for extra security.
 
-Sending emails is done using the SendGrid API.
+Sending emails is done using the SendGrid API. Users can use the contact form to send an email to the business email address of the owner of the app.
 I also implemented a subscription system, so that users who are subscribed get notified when a new event is added, edited or removed, with that specific events details.
 There is also an unsubscribe function which deleted the specific user from the database.
 
