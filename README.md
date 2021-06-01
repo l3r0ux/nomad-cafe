@@ -1,4 +1,4 @@
-# nomad-cafe
+# Nomad Cafe
 
 ## About this project:
 This is a fullstack web application that I made for a friend using Node.js with express and MongoDB with mongoose on the backend.
@@ -42,15 +42,15 @@ CLOUDINARY_SECRET="your cloudinary secret"
 MONGOSTORESECRET=a-nee-a  
 
 
-## To get the API keys and setup:
-### Mapbox:
+### To get the API keys and setup:
+#### Mapbox:
 Create a mapbox account or log in, and use the "Default public token" as the api key for the .env file.
-### SGMail(sendgrid):
+#### SGMail(sendgrid):
 Go to sendgrid.com and create an account or log in, then go to settings -> API keys -> Create API key. Use that API key in the .env file.
-### Cloudinary:
+#### Cloudinary:
 Create a cloudinary account or log in. On your dashboard, copy the cloud name, api key and api secret into the appropriate field in the .env file.
 
-## Creating an admin profile locally:
+### Creating an admin profile locally:
 Since the nature of the app is such that there will be only a couple of admin users, and normal users can't create their own profiles,
 you have to create your own admin profile manually in order to log in and add menu items, events, location etc.
 You can achieve it like this:
@@ -61,7 +61,7 @@ This will now create the account in your local mongo database, with your passwor
 Go back to your code editor and re-comment line 27-30 again, save, and restart the server.
 Go back to the website and refresh the page, you should be logged into the admin panel now.
 
-## Configuring SendGrid to allow for receiving emails to your own address:
+### Configuring SendGrid to allow for receiving emails to your own address:
 For sendgrid, you must create a verified single sender.
 Go to your sendgrid account -> settings -> Sender Authentication, then click on verify a single sender.
 Add the email address you want the emails to be sent from and fill out the rest of the fields.
