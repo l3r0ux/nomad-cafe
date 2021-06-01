@@ -1,6 +1,6 @@
 # nomad-cafe
 
-##About this project:
+## About this project:
 This is a fullstack web application that I made for a friend using Node.js with express and MongoDB with mongoose on the backend.
 I wrote everything from scratch with vanilla html, css and javascript on the front end. I followed the MVC architecture for the routes.
 This web app was designed from a mobile first perspective and is fully responsive.
