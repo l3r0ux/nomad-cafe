@@ -26,11 +26,11 @@ I also used Helmet.js for some added security. There is also extensive error han
 Since the app is deployed and only admin users can log in, you have to set the app up on your local machine in order to test the backend functionalities.
 The following is a guide on how to get the app running on your local machine:
 
-1. Download the source code.
-2. Install node.js and mongodb if you do not have it already and make sure mongo server is running.
-3. Open the project in your code editor of choice.
-4. Run "npm install" to install all the dependencies for the project.
-5. Make a ".env" file at the top most level of the project folder, type the following, and save: (enter your own api keys where you see "your key")
+* Download the source code.
+* Install node.js and mongodb if you do not have it already and make sure mongo server is running.
+* Open the project in your code editor of choice.
+* Run "npm install" to install all the dependencies for the project.
+* Make a ".env" file at the top most level of the project folder, type the following, and save: (enter your own api keys where you see "your key")
 
 SECRET=jysalnie  
 DBNAME=mongodb://localhost:27017/nomadCafe  
@@ -50,7 +50,7 @@ Go to sendgrid.com and create an account or log in, then go to settings -> API k
 #### Cloudinary:
 Create a cloudinary account or log in. On your dashboard, copy the cloud name, api key and api secret into the appropriate field in the .env file.
 
-### 6. Creating an admin profile locally:
+### Creating an admin profile locally:
 Since the nature of the app is such that there will be only a couple of admin users, and normal users can't create their own profiles,
 you have to create your own admin profile manually in order to log in and add menu items, events, location etc.  
 You can achieve it like this:  
