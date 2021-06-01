@@ -16,7 +16,7 @@ I also implemented an authentication system with express sessions and cookies fo
 The admins' password are also hashed and salted for extra security.
 
 Sending emails is done using the SendGrid API.
-I also implemented a subscription system, so that users get notified when a new event is added, edited or removed, with that specific events details.
+I also implemented a subscription system, so that users who are subscribed get notified when a new event is added, edited or removed, with that specific events details.
 There is also an unsubscribe function which deleted the specific user from the database.
 
 There is also server side input validation and sanitization on all inputs using the Express-Validator package.
@@ -60,15 +60,15 @@ You can achieve it like this:
 * Scroll all the way down to the footer and click on "admin login". Enter the username and password of the account you would like to create, and click log in.  
 This will now create the account in your local mongo database, with your password hashed and salted with the bcrypt package.
 * Go back to your code editor and re-comment line 27-30 again, save, and restart the server.
-* Go back to the website and refresh the page, you should be logged into the admin panel now.
+* Go back to the website and refresh the page, you should be logged into the admin panel now.  
+No you can add, edit or remove menu items, events, gallery photos or the location.  
+See the next section on how to set up the email system that you receive the emails.  
 
 ### Configuring SendGrid to allow for receiving emails to your own address:
-For sendgrid, you must create a verified single sender.  
-* Go to your sendgrid account -> settings -> Sender Authentication, then click on verify a single sender.
-* Add the email address you want the emails to be sent from and fill out the rest of the fields.
-* Go to the nomadcafe files -> controllers -> subscriber.js, then change line 25 "from" field to the sender you just verified, and on line 23 add the email address you want to recieve the email sent by the sender.
-* Also go to the event.js file in the same folder, and on line 55, 113 and 149, change the "from" email address to the single sender you verified.  
-Now you should be able to enter an email on the website, hit send, and you should recieve the email.  
+* Go to the nomadcafe files -> controllers -> subscriber.js, on line 23 add the email address you want to recieve the emails sent by the sender.
+Now you should be able to enter an email on the website, hit send, and you should recieve the email.   
 For the unsubscribing to work correctly when app is running locally:  
 * Go to the views folder -> unsubscribed.html -> line 58, 116 and 152 and change `https://nomadcafe.herokuapp.com/subscriber/delete/${subscriber.token}` to `http://localhost:3000/subscriber/delete/${subscriber.token}`.
-* And in the views folder -> unsubscribed.html -> line 24 -> change `https://nomadcafe.herokuapp.com/` to `http://localhost:3000/` so that you go back to the locally served website instead of the deployed version.
+* And in the views folder -> unsubscribed.html -> line 24 -> change `https://nomadcafe.herokuapp.com/` to `http://localhost:3000/` so that you go back to the locally served website instead of the deployed version.  
+To test out the subscription system, enter your email address in the subscribe form on the website, then add, edit or delete an event.  
+You should get the email with the corresponding event details you added. 
