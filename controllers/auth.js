@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcrypt');
 
 const Admin = require('../models/admin');
 const path = require('path');
@@ -21,18 +22,18 @@ module.exports.getLoginPage = (req, res) => {
 
 // Log user in, set them in session
 module.exports.login = async (req, res) => {
+    let { username, password } = req.body;
+    // This commented out code was to use this route to add a new admin
+    // password = await bcrypt.hash(password, 12);
+    // const admin = new Admin({ username, password });
+    // await admin.save();
+    // req.session.admin_id = admin._id;
     try {
         // results from the validation
         const validationErrors = validationResult(req);
         if (validationErrors.errors.length > 0) {
             res.send(loginTemplate({ validationErrors }));
         } else {
-            let { username, password } = req.body;
-            // This commented out code was to use this route to add a new admin
-            // password = await bcrypt.hash(password, 12);
-            // const admin = new Admin({ username, password });
-            // await admin.save();
-            // req.session.admin_id = admin._id;
             const foundAdmin = await Admin.findAndValidate(username, password);
             if (foundAdmin) {
                 req.session.admin_id = foundAdmin._id;

@@ -92,7 +92,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/djkyfcfl1/",
+                `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/`,
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
         },
