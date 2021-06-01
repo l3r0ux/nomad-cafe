@@ -2,7 +2,7 @@
 https://nomadcafe.herokuapp.com/
 
 ## About this project:
-This is a fullstack web application that I made for a friend using Node.js with express and MongoDB with mongoose on the backend.
+This is a fullstack web application that I made for a mobile coffee business using Node.js with express and MongoDB with mongoose on the backend. The owner can log into an admin panel, where they can add their menu, events where they are going to be, gallery images and their exact location for when they are at an event. 
 I wrote everything from scratch with vanilla html, css and javascript on the front end. I followed the MVC architecture for the routes.
 This web app was designed from a mobile first perspective and is fully responsive.
 Please note, when changing the screen size on the fly, be sure to reload the page when breakpoints are reached so that the Javascript can be reloaded.
@@ -44,6 +44,7 @@ MONGOSTORESECRET=a-nee-a
 
 
 ### To get the API keys and setup:
+** Please note that at no point during account creation for these websites do you need to enter your banking credentials. All the API keys and email senders can be acquired without any payment. **
 #### Mapbox:
 Create a mapbox account or log in, and use the "Default public token" as the api key for the .env file.
 #### SGMail(sendgrid):
