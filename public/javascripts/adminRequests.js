@@ -41,7 +41,7 @@ const postMenuItem = async (formData, submittedForm) => {
         sideScrollWindowItemContainer.className = 'side-scroll-window__item';
         // putting id as hidden input aswell
         // access with document.getElementById('menuItemId').value
-        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${data._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${data.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${data.menuItemName}</h2><h3>${data.menuItemPrice}</h3><p>${data.menuItemDescription}</p></div>`;
+        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${data._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="/images/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="/images/edit_m0wxkf.png"></div><img src=${data.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${data.menuItemName}</h2><h3>${data.menuItemPrice}</h3><p>${data.menuItemDescription}</p></div>`;
         appendLocation.append(sideScrollWindowItemContainer);
         return feedbackModal("Menu item succesfully added.", "OK");
     }
@@ -87,7 +87,7 @@ const updateMenuItem = async (formData, submittedForm) => {
         const appendLocation = document.querySelector('#menu-page .side-scroll-window');
         const sideScrollWindowItemContainer = document.createElement('div');
         sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${data._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${data.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${data.menuItemName}</h2><h3>${data.menuItemPrice}</h3><p>${data.menuItemDescription}</p></div>`;
+        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${data._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="/images/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="/images/edit_m0wxkf.png"></div><img src=${data.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${data.menuItemName}</h2><h3>${data.menuItemPrice}</h3><p>${data.menuItemDescription}</p></div>`;
         appendLocation.append(sideScrollWindowItemContainer);
         return feedbackModal("Menu item succesfully updated.", "OK");
     }
@@ -168,7 +168,7 @@ const postEvent = async (formData, submittedForm) => {
         sideScrollWindowItemContainer.className = 'side-scroll-window__item';
         // putting id as hidden input aswell
         // access with document.getElementById('eventId').value
-        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="eventId" value="${data._id}"><div class="delete-item button-helper event-delete"><img class="event-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class="edit-item button-helper event-update"><img class="event-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${data.eventImageUrl} alt="coffee-landrover" class="events-image"><div class="event-container"><div class="logo"><img src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png" alt="logo"></div><p class="event-details">${data.eventName}</p><p class="event-details">${data.eventDate}</p><p class="event-details">${data.eventLocation}</p></div>`;
+        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="eventId" value="${data._id}"><div class="delete-item button-helper event-delete"><img class="event-delete" src="/images/delete_joanpj.png"></div><div class="edit-item button-helper event-update"><img class="event-update" src="/images/edit_m0wxkf.png"></div><img src=${data.eventImageUrl} alt="coffee-landrover" class="events-image"><div class="event-container"><div class="logo"><img src="/images/logo_ubgkoi.png" alt="logo"></div><p class="event-details">${data.eventName}</p><p class="event-details">${data.eventDate}</p><p class="event-details">${data.eventLocation}</p></div>`;
         appendLocation.append(sideScrollWindowItemContainer);
         return feedbackModal("Event succesfully added.", "OK")
     }
@@ -212,7 +212,7 @@ const updateEvent = async (formData, submittedForm) => {
         // Appending new menu item with same id as before
         const sideScrollWindowItemContainer = document.createElement('div');
         sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="eventId" value="${data._id}"><div class="delete-item button-helper event-delete"><img class="event-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class="edit-item button-helper event-update"><img class="event-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${data.eventImageUrl} alt="coffee-landrover" class="events-image"><div class="event-container"><div class="logo"><img src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png" alt="logo"></div><p class="event-details">${data.eventName}</p><p class="event-details">${data.eventDate}</p><p class="event-details">${data.eventLocation}</p></div>`;
+        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="eventId" value="${data._id}"><div class="delete-item button-helper event-delete"><img class="event-delete" src="/images/delete_joanpj.png"></div><div class="edit-item button-helper event-update"><img class="event-update" src="/images/edit_m0wxkf.png"></div><img src=${data.eventImageUrl} alt="coffee-landrover" class="events-image"><div class="event-container"><div class="logo"><img src="/images/logo_ubgkoi.png" alt="logo"></div><p class="event-details">${data.eventName}</p><p class="event-details">${data.eventDate}</p><p class="event-details">${data.eventLocation}</p></div>`;
         oldEvent.parentNode.replaceChild(sideScrollWindowItemContainer, oldEvent);
         return feedbackModal("Event succesfully updated", "OK")
     }
@@ -291,7 +291,7 @@ const postGalleryImage = async (formData, submittedForm) => {
         const appendLocation = document.querySelector('#gallery-page .side-scroll-window');
         const sideScrollWindowItemContainer = document.createElement('div');
         sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="galleryId" value="${data._id}"></input><div class="delete-item button-helper gallery-delete"><img class="gallery-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><img src="${data.galleryImageUrl}" class="gallery-image">`;
+        sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="galleryId" value="${data._id}"></input><div class="delete-item button-helper gallery-delete"><img class="gallery-delete" src="/images/delete_joanpj.png"></div><img src="${data.galleryImageUrl}" class="gallery-image">`;
         appendLocation.append(sideScrollWindowItemContainer);
         return feedbackModal("Photo succesfully added", "OK")
     }
@@ -403,7 +403,7 @@ const deleteLocation = async (submittedForm) => {
         const h2 = document.createElement('h2');
         h2.append('Not Currently at an Event');
         let img = document.createElement('img');
-        img.src = 'https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/menu_page_background_xqsyd9.jpg';
+        img.src = '/images/menu_page_background_xqsyd9.jpg';
         img.id = 'no-location-background'
         mapLocation.append(img);
         map.append(img);

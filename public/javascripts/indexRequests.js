@@ -1,9 +1,6 @@
 // Get Menu items on page load
 const getMenu = async () => {
     const res = await fetch('/menu');
-    // make helper functions to output these error modals based on args it receives for all these fetches
-    // See what I did for contact and subscribe fetches
-    // keep the appending for the actual items the same, or also make function for it so we can use it in admin.js aswell when appending
     if (!(res.ok)) {
         const appendLocation = document.querySelector('#menu-page .side-scroll-window');
         const sideScrollWindowItemContainer = document.createElement('div');
@@ -23,7 +20,7 @@ const getMenu = async () => {
             const appendLocation = document.querySelector('#menu-page .side-scroll-window');
             const sideScrollWindowItemContainer = document.createElement('div');
             sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${item._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${item.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${item.menuItemName}</h2><h3>${item.menuItemPrice}</h3><p>${item.menuItemDescription}</p></div>`;
+            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="menuItemId" value="${item._id}"><div class='delete-item button-helper menu-delete'><img class="menu-delete" src="/images/delete_joanpj.png"></div><div class='edit-item button-helper menu-update'><img class="menu-update" src="/images/NomadCafe/edit_m0wxkf.png"></div><img src=${item.menuImageUrl} class='menu-item__image'><div class='menu-item__description'><h2>${item.menuItemName}</h2><h3>${item.menuItemPrice}</h3><p>${item.menuItemDescription}</p></div>`;
             appendLocation.append(sideScrollWindowItemContainer);
         });
     }
@@ -52,7 +49,7 @@ const getEvents = async () => {
             const appendLocation = document.querySelector('#events-page .side-scroll-window');
             const sideScrollWindowItemContainer = document.createElement('div');
             sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="eventId" value="${item._id}"><div class="delete-item button-helper event-delete"><img class="event-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><div class="edit-item button-helper event-update"><img class="event-update" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618233798/NomadCafe/edit_m0wxkf.png"></div><img src=${item.eventImageUrl} class="events-image"><div class="event-container"><div class="logo"><img src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png" alt="logo"></div><p class="event-details">${item.eventName}</p><p class="event-details">${item.eventDate}</p><p class="event-details">${item.eventLocation}</p></div>`;
+            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="eventId" value="${item._id}"><div class="delete-item button-helper event-delete"><img class="event-delete" src="/images/delete_joanpj.png"></div><div class="edit-item button-helper event-update"><img class="event-update" src="/images/edit_m0wxkf.png"></div><img src=${item.eventImageUrl} class="events-image"><div class="event-container"><div class="logo"><img src="/images/logo_ubgkoi.png" alt="logo"></div><p class="event-details">${item.eventName}</p><p class="event-details">${item.eventDate}</p><p class="event-details">${item.eventLocation}</p></div>`;
             appendLocation.append(sideScrollWindowItemContainer);
         });
     }
@@ -82,7 +79,7 @@ const getGallery = async () => {
             const appendLocation = document.querySelector('#gallery-page .side-scroll-window');
             const sideScrollWindowItemContainer = document.createElement('div');
             sideScrollWindowItemContainer.className = 'side-scroll-window__item';
-            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="galleryId" value="${item._id}"></input><div class="delete-item button-helper gallery-delete"><img class="gallery-delete" src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1618231557/NomadCafe/delete_joanpj.png"></div><img src="${item.galleryImageUrl}" class="gallery-image">`;
+            sideScrollWindowItemContainer.innerHTML = `<input type="hidden" id="galleryId" value="${item._id}"></input><div class="delete-item button-helper gallery-delete"><img class="gallery-delete" src="/images/delete_joanpj.png"></div><img src="${item.galleryImageUrl}" class="gallery-image">`;
             appendLocation.append(sideScrollWindowItemContainer);
         });
     }
@@ -109,7 +106,7 @@ const getLocation = async () => {
     } else if (data.html) {
         let html = document.createElement('h2');
         let img = document.createElement('img');
-        img.src = 'https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/menu_page_background_xqsyd9.jpg';
+        img.src = '/images/menu_page_background_xqsyd9.jpg';
         img.id = 'no-location-background';
         html.append(data.html);
         mapLocation.append(html);

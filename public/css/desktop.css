@@ -45,11 +45,11 @@
 
     #landing-page {
         background: -o-linear-gradient(bottom, rgba(80, 68, 18, 0.6) 10%, transparent),
-            url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
+            url("/images/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
         background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(80, 68, 18, 0.6)), to(transparent)),
-            url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
+            url("/images/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
         background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-            url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580429/NomadCafe/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
+            url("/images/dummy-landing-page-image_yhtf2k.jpg") center/cover no-repeat fixed border-box, #ECE0D1;
     }
 
     #landing-page .main-content-container,
@@ -71,11 +71,11 @@
     }
 
     #welcome-page {
-        background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/welcome_page_background_o6bmst.jpg") center/cover no-repeat, #D5C7B7;
+        background: url("/images/welcome_page_background_o6bmst.jpg") center/cover no-repeat, #D5C7B7;
     }
 
     #menu-page {
-        background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/menu_page_background_xqsyd9.jpg") center/cover no-repeat, #BEAD9C;
+        background: url("/images/menu_page_background_xqsyd9.jpg") center/cover no-repeat, #BEAD9C;
     }
 
     .menu-item__description h2 {
@@ -96,19 +96,19 @@
     }
 
     #events-page {
-        background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580388/NomadCafe/events_page_background_cplvdo.jpg") bottom left/cover no-repeat, #A89482;
+        background: url("/images/events_page_background_cplvdo.jpg") bottom left/cover no-repeat, #A89482;
     }
 
     #gallery-page {
-        background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/gallery_page_background_epahve.jpg") bottom right/cover no-repeat, #917B67;
+        background: url("/images/gallery_page_background_epahve.jpg") bottom right/cover no-repeat, #917B67;
     }
 
     #location-page {
-        background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/location_page_background_msica3.jpg") bottom left/cover no-repeat,  #7A614D;
+        background: url("/images/location_page_background_msica3.jpg") bottom left/cover no-repeat,  #7A614D;
     }
 
     #contact-page {
-        background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/menu_page_background_xqsyd9.jpg") center/cover no-repeat, #634832;
+        background: url("/images/menu_page_background_xqsyd9.jpg") center/cover no-repeat, #634832;
     }
 
     #menu-page > h2 {

@@ -34,7 +34,7 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: url("https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580428/NomadCafe/menu_page_background_xqsyd9.jpg") center/cover no-repeat, #BEAD9C;
+    background: url("/images/menu_page_background_xqsyd9.jpg") center/cover no-repeat, #BEAD9C;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

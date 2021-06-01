@@ -9,7 +9,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 // for generating random token for subscribers
 const session = require('express-session');
-// Helmet is for security
 const helmet = require('helmet');
 const MongoStore = require('connect-mongo');
 const errorTemplate = require('./views/error');
@@ -22,7 +21,6 @@ const locationRoutes = require('./routes/location');
 const subscriberRoutes = require('./routes/subscriber');
 const { strict } = require('assert');
 
-// mongodb+srv://dbAdminLeroux:PAHoAxm70YRniQLs@cluster0.wieco.mongodb.net/nomadCafe?retryWrites=true&w=majority
 const dbUrl = process.env.DBNAME;
 
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -34,7 +32,6 @@ mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log(err)
     });
 
-// make this a legit secret with environment variable before launch
 const sessionConfig = {
     // Should also change the cookie name so that people dont know what to look for in the cookies
     name: 'session',

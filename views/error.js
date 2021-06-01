@@ -14,10 +14,10 @@ module.exports = function errorTemplate({ error }) {
         </nav>
         <main>
             <section>
-                <img src="https://res.cloudinary.com/djkyfcfl1/image/upload/v1616580427/NomadCafe/logo_ubgkoi.png"
+                <img src="/images/logo_ubgkoi.png"
                     alt="logo">
                 <p>${error}</p>
-                <a href="http://localhost:3000/admin">Back to main site</a>
+                <a href="https://nomadcafe.herokuapp.com/admin">Back to main site</a>
             </section>
         </main>
     `});
