@@ -65,7 +65,9 @@ No you can add, edit or remove menu items, events, gallery photos or the locatio
 See the next section on how to set up the email system that you receive the emails.  
 
 ### Configuring SendGrid to allow for receiving emails to your own address:
-* Go to the nomadcafe files -> controllers -> subscriber.js, on line 23 add the email address you want to recieve the emails sent by the sender.
+You need to create your own verified sender on SendGrid.  
+* Go to your SendGrid profile -> Settings -> Sender Authentication, and fill out the fields to create a new verified sender.
+* Once the sender is verified, go to the nomadcafe files -> controllers -> subscriber.js, on line 25 replace the "from" field with the email address of the sender you just verified. On line 23 add the email address you want to recieve the emails sent by the sender.
 Now you should be able to enter an email on the website, hit send, and you should recieve the email.   
 For the unsubscribing to work correctly when app is running locally:  
 * Go to the views folder -> unsubscribed.html -> line 58, 116 and 152 and change `https://nomadcafe.herokuapp.com/subscriber/delete/${subscriber.token}` to `http://localhost:3000/subscriber/delete/${subscriber.token}`.
