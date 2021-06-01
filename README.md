@@ -50,26 +50,24 @@ Go to sendgrid.com and create an account or log in, then go to settings -> API k
 #### Cloudinary:
 Create a cloudinary account or log in. On your dashboard, copy the cloud name, api key and api secret into the appropriate field in the .env file.
 
-### Creating an admin profile locally:
+### 6. Creating an admin profile locally:
 Since the nature of the app is such that there will be only a couple of admin users, and normal users can't create their own profiles,
-you have to create your own admin profile manually in order to log in and add menu items, events, location etc.
-You can achieve it like this:
-Go to the controllers folder and open auth.js, comment in line 27-30.
-Run the server by typing "npm start" in your terminal and open the app in the browser on localhost:3000, or whichever port it is served on on your local machine.
-Scroll all the way down to the footer and click on "admin login". Enter the username and password of the account you would like to create, and click log in.
+you have to create your own admin profile manually in order to log in and add menu items, events, location etc.  
+You can achieve it like this:  
+* Go to the controllers folder and open auth.js, comment in line 27-30.
+* Run the server by typing "npm start" in your terminal and open the app in the browser on localhost:3000, or whichever port it is served on on your local machine.
+* Scroll all the way down to the footer and click on "admin login". Enter the username and password of the account you would like to create, and click log in.  
 This will now create the account in your local mongo database, with your password hashed and salted with the bcrypt package.
-Go back to your code editor and re-comment line 27-30 again, save, and restart the server.
-Go back to the website and refresh the page, you should be logged into the admin panel now.
+* Go back to your code editor and re-comment line 27-30 again, save, and restart the server.
+* Go back to the website and refresh the page, you should be logged into the admin panel now.
 
 ### Configuring SendGrid to allow for receiving emails to your own address:
-For sendgrid, you must create a verified single sender.
-Go to your sendgrid account -> settings -> Sender Authentication, then click on verify a single sender.
-Add the email address you want the emails to be sent from and fill out the rest of the fields.
-Go to the nomadcafe files -> controllers -> subscriber.js, then change line 25 "from" field to the sender you just verified,
-and on line 23 add the email address you want to recieve the email sent by the sender.
-Also go to the event.js file in the same folder, and on line 55, 113 and 149, change the "from" email address to the single sender you verified.
-Now you should be able to enter an email on the website, hit send, and you should recieve the email.
-You can also subscribe with the subscribe form, then if the admin adds an event, the subscriber will recieve an email with the details of that event.
-The subscriber can also unsbuscribe from the email service, which removes them from the database.
-For this to work, you must go to the views folder -> unsubscribed.html -> line 58, 116 and 152 and change "https://nomadcafe.herokuapp.com/subscriber/delete/${subscriber.token}" to "http://localhost:3000/subscriber/delete/${subscriber.token}".
-And in the views folder -> unsubscribed.html -> line 24 -> change "https://nomadcafe.herokuapp.com/" to "http://localhost:3000/" so that you go back to the locally served website instead of the deployed version.
+For sendgrid, you must create a verified single sender.  
+* Go to your sendgrid account -> settings -> Sender Authentication, then click on verify a single sender.
+* Add the email address you want the emails to be sent from and fill out the rest of the fields.
+* Go to the nomadcafe files -> controllers -> subscriber.js, then change line 25 "from" field to the sender you just verified, and on line 23 add the email address you want to recieve the email sent by the sender.
+* Also go to the event.js file in the same folder, and on line 55, 113 and 149, change the "from" email address to the single sender you verified.  
+Now you should be able to enter an email on the website, hit send, and you should recieve the email.  
+For the unsubscribing to work correctly when app is running locally:  
+* Go to the views folder -> unsubscribed.html -> line 58, 116 and 152 and change `https://nomadcafe.herokuapp.com/subscriber/delete/${subscriber.token}` to `http://localhost:3000/subscriber/delete/${subscriber.token}`.
+* And in the views folder -> unsubscribed.html -> line 24 -> change `https://nomadcafe.herokuapp.com/` to `http://localhost:3000/` so that you go back to the locally served website instead of the deployed version.
