@@ -22,29 +22,24 @@ There is also server side input validation and sanitization on all inputs using 
 The validation errors are dynamically sent back to the front end asynchronously, and rendered at the appropriate input.
 I also used Helmet.js for some added security. There is also extensive error handling with dynamically rendered error popups.
 
-
-Setting up the project on your local machine:
+## Setting up the project on your local machine:
 Since the app is deployed and only admin users can log in, you have to set the app up on your local machine in order to test the backend functionalities.
 The following is a guide on how to get the app running on your local machine:
 
-Download the source code.
+1. Download the source code.
+2. Install node.js and mongodb if you do not have it already and make sure mongo server is running.
+3. Open the project in your code editor of choice.
+4. Run "npm install" to install all the dependencies for the project.
+5. Make a ".env" file at the top most level of the project folder, type the following, and save: (enter your own api keys where you see "your key")
 
-Install node.js and mongodb if you do not have it already and make sure mongo server is running.
-
-Open the project in your code editor of choice.
-
-Run "npm install" to install all the dependencies for the project.
-
-Make a ".env" file at the top most level of the project folder, type the following, and save: (enter your own api keys where you see "your key")
-
-SECRET=jysalnie
+code(SECRET=jysalnie
 DBNAME=mongodb://localhost:27017/nomadCafe
 MAPBOXTOKEN="your key"
 SGMAIL="your key"
 CLOUDINARY_CLOUD_NAME="your cloudinary account Cloud name"
 CLOUDINARY_KEY="your cloudinary API key"
 CLOUDINARY_SECRET="your cloudinary secret"
-MONGOSTORESECRET=a-nee-a
+MONGOSTORESECRET=a-nee-a)
 
 To get the API keys and setup:
 Mapbox:
