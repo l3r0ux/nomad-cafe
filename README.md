@@ -17,7 +17,7 @@ The admins' password are also hashed and salted for extra security.
 
 Sending emails is done using the SendGrid API. Users can use the contact form to send an email to the business email address of the owner of the app.
 I also implemented a subscription system, so that users who are subscribed get notified when a new event is added, edited or removed, with that specific events details.
-There is also an unsubscribe function which deleted the specific user from the database.
+There is also an unsubscribe function which deletes the specific user from the database.
 
 There is also server side input validation and sanitization on all inputs using the Express-Validator package.
 The validation errors are dynamically sent back to the front end asynchronously, and rendered at the appropriate input.
@@ -61,7 +61,7 @@ You can achieve it like this:
 This will now create the account in your local mongo database, with your password hashed and salted with the bcrypt package.
 * Go back to your code editor and re-comment line 27-30 again, save, and restart the server.
 * Go back to the website and refresh the page, you should be logged into the admin panel now.  
-No you can add, edit or remove menu items, events, gallery photos or the location.  
+Now you can add, edit or remove menu items, events, gallery photos or the location.  
 See the next section on how to set up the email system that you receive the emails.  
 
 ### Configuring SendGrid to allow for receiving emails to your own address:
