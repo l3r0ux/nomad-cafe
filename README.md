@@ -61,7 +61,7 @@ You can achieve it like this:
 This will now create the account in your local mongo database, with your password hashed and salted with the bcrypt package.
 * Go back to your code editor and re-comment line 27-30 again, save, and restart the server.
 * Go back to the website and refresh the page, you should be logged into the admin panel now.  
-Now you can add, edit or remove menu items, events, gallery photos or the location.  
+At first there won't be any menu items or anything on display since the database is empty, but now you can add, edit or remove menu items, events, gallery photos or the location.  
 See the next section on how to set up the email system that you receive the emails.  
 
 ### Configuring SendGrid to allow for receiving emails to your own address:
