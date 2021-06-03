@@ -2,8 +2,8 @@
 https://nomadcafe.herokuapp.com/
 
 ## About this project:
-This is a fullstack web application that I made for a mobile coffee business using Node.js with express and MongoDB with mongoose on the backend. The owner can log into an admin panel, where they can add their menu, events where they are going to be, gallery images and their exact location for when they are at an event. 
-I wrote everything from scratch with vanilla html, css and javascript on the front end, and I also made/edited all of the images for the site with Photoshop. I followed the MVC architecture for the routes.
+This is a fullstack web application that I made for a mobile coffee business using Node.js with express, and MongoDB with mongoose on the backend. The owner can log into an admin panel, where they can add their menu, events where they are going to be, gallery images and their exact location for when they are at an event. 
+I wrote everything from scratch with vanilla html, css and javascript on the front end, and I also made/edited all of the images for the site with Photoshop. The API I wrote with Node.js is RESTful and I followed the MVC architecture for the routes.
 This web app was designed from a mobile first perspective and is fully responsive.
 Please note, when changing the screen size on the fly, be sure to reload the page when breakpoints are reached so that the Javascript can be reloaded.
 
