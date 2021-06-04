@@ -33,14 +33,14 @@ The following is a guide on how to get the app running on your local machine:
 * Open a terminal on the top level of the project, and run "npm install" to install all the dependencies for the project.
 * Make a ".env" file at the top most level of the project folder, type the following, and save: (enter your own api keys where you see "your key")
 
-SECRET=jysalnie  
+SECRET=secret  
 DBNAME=mongodb://localhost:27017/nomadCafe  
 MAPBOXTOKEN="your key"  
 SGMAIL="your key"  
 CLOUDINARY_CLOUD_NAME="your cloudinary account Cloud name"  
 CLOUDINARY_KEY="your cloudinary API key"  
 CLOUDINARY_SECRET="your cloudinary secret"  
-MONGOSTORESECRET=a-nee-a  
+MONGOSTORESECRET=secret  
 
 
 ### To get the API keys and setup:
